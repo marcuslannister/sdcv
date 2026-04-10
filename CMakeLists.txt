@@ -87,6 +87,10 @@ include_directories(
 	${CMAKE_CURRENT_BINARY_DIR}
       )
 
+if (GLIB2_LIBRARY_DIRS)
+  link_directories(${GLIB2_LIBRARY_DIRS})
+endif()
+
 if (WITH_READLINE)
   include_directories(${READLINE_INCLUDE_DIR})
 endif()
